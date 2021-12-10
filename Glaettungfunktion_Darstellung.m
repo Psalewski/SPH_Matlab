@@ -1,13 +1,16 @@
 %
 % Showing effects of the smoothening kernel 
 %
-clear all
 
+%==========================================================================
+clear all;
+close all;
+%==========================================================================
 spaceing = 0.01;    %Verteilung der Partikel 
 h = 0.001;          %smoothining length;
 k= 1;
 hk = h*k;           %Einflussradius
-
+%==========================================================================
 width = 1;
 height =width;
 Partikel = (width/spaceing +1) * (width/spaceing +1);
@@ -32,7 +35,7 @@ for i = 1:Partikel
 
 
 end
-
+%==========================================================================
 
 function y= gauss1d(glaet, dr)
     y = (1/(pi *sqrt(glaet)))*  exp(-((dr*dr)/(glaet*glaet)));
